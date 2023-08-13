@@ -1,0 +1,23 @@
+<div class="flex gap-5 mb-40">
+  <div>
+    <h2 class="font-bold text-2xl mb-5">Q&A</h2>
+    <div class="flex gap-5 flex-col">
+      <div *ngFor="let container of containers" class="bg-container-bg-color bg-opacity-50 rounded-xl p-4 flex">
+        <div class="mr-3">
+          <img class="w-[40px]" src="../../../assets/images/messagequestion.svg"/>
+        </div>
+        <div>
+          <h2 class="font-bold text-lg">{{container.title}}</h2>
+          <p>{{container.text}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <img src="../../../assets/images/Group%2095.svg" />
+    <h2 class="font-bold text-2xl mb-5">Answer all your questions</h2>
+    <p>If you have any questions - leave a request and we will contact you as soon as possible</p>
+    <button class="bg-button-color bg-opacity-70 p-4 rounded-3xl px-8 text-white">Get a consultation</button>
+  </div>
+</div>

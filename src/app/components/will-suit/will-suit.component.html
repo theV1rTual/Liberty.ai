@@ -1,0 +1,23 @@
+<div class="mb-40">
+  <h2 class="font-bold text-2xl mb-5">Whom it will suit?</h2>
+  <div class="flex">
+    <div>
+      <ul class="flex flex-wrap">
+        <li *ngFor="let category of categories" [ngClass]="!category.active ? 'bg-border-color' : 'bg-li-color' " class="px-2 py-1 mr-10 mb-5 border-li-color border-2 rounded-xl">
+          {{category.name}}
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-5">
+      <div>
+        <p class="text-active-tab-color">Our goal</p>
+        <p>Improving the efficiency of any type of communication by optimizing processes and introducing AI</p>
+      </div>
+      <div>
+        <p class="text-active-tab-color">Our clients</p>
+        <p>Any business where there is communication with the client</p>
+      </div>
+    </div>
+  </div>
+
+</div>

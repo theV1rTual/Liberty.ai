@@ -1,0 +1,20 @@
+<div class="mb-40">
+  <h2 class="font-bold text-2xl mb-5">Processes</h2>
+  <div class="flex gap-5 mb-5">
+    <div *ngFor="let process of processes" class="bg-container-bg-color bg-opacity-50 rounded-xl p-4 w-1/3">
+      <h2 class="font-bold text-lg mb-5">{{process.title}}</h2>
+      <p class="font-bold text-active-tab-color mb-5">{{process.description}}</p>
+      <p>{{process.text}}</p>
+    </div>
+  </div>
+  <div class="flex gap-20 bg-container-bg-color bg-opacity-50 rounded-xl p-4">
+    <div>
+      <h2 class="font-bold text-lg mb-5">Clients support</h2>
+      <p class="font-bold text-active-tab-color mb-5">Up to 70%</p>
+      <p>Save time for the customer support department. We automate customer service and technical support for your product</p>
+    </div>
+    <div>
+      <img src="assets/images/Group%2095.svg" />
+    </div>
+  </div>
+</div>

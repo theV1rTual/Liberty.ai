@@ -9,37 +9,37 @@ export class SolutionsComponent {
   leftSolutions = [
     {
       image: 'assets/images/solutions1.svg',
-      text: 'Appointment and confirmation of appointments/meetings'
+      text: 'Implementing NPS Surveys'
     },
     {
       image: 'assets/images/solutions2.svg',
-      text: 'Retrying a sale to previously disclaimed customers'
+      text: 'Loyalty Programs Engagement'
     },
     {
       image: 'assets/images/solutions3.svg',
-      text: 'Cold selling and telemarketing'
+      text: 'Cart Reminder'
     },
     {
       image: 'assets/images/solutions4.svg',
-      text: 'Informing about promotions'
+      text: 'Rapid Self-Service'
     }
   ]
   rightSolutios = [
     {
       image: 'assets/images/solutions6.svg',
-      text: 'Replacing SMS mailings with auto funnels with AI and robots'
+      text: 'Interest-Based Promos'
     },
     {
       image: 'assets/images/solutions6.svg',
-      text: 'Collecting feedback on the provided services'
+      text: 'Tailored Updates'
     },
     {
       image: 'assets/images/solutions7.svg',
-      text: 'Encouraging the client to take the target action'
+      text: 'Encouraging the client to take Target Action'
     },
     {
       image: 'assets/images/solutions8.svg',
-      text: 'Cross selling and upsells'
+      text: 'Multichannel Reach'
     }
   ]
 }

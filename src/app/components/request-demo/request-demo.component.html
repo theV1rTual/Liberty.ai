@@ -1,9 +1,14 @@
 <div class="mb-16 md:mb-40">
   <div class="flex flex-col text-center">
-    <img src="assets/images/Component%201.svg" class="h-[15vh] md:h-[30vh] max-w-full" />
-    <h2 class="font-bold text-xl md:text-2xl my-3">Automate your first advertising campaign absolutely free</h2>
+<!--    <img src="assets/images/Component%201.svg" class="h-[15vh] md:h-[30vh] max-w-full" />-->
+    <img
+      [@fadeInOut]="currentIndex"
+      [src]="images[currentIndex]"
+      class="slideshow-image h-[5vh] md:h-[30vh] max-w-full"
+    />
+    <h2 class="font-bold text-xl md:text-2xl my-3">Empower your Customer Engagement and Elevate your Sales with our AI-powered solution</h2>
     <div>
-      <button class="w-[100%] md:w-[auto] font-semibold md:px-10 bg-button-color bg-opacity-70 p-3 md:p-4 rounded-3xl px-6">Request your demo</button>
+      <button class="w-[100%] md:w-[auto] font-semibold md:px-10 bg-button-color bg-opacity-70 p-3 md:p-4 rounded-3xl px-6">Boost Your Sales Today</button>
     </div>
   </div>
 </div>

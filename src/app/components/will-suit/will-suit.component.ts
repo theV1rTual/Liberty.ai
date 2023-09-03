@@ -7,18 +7,17 @@ import {Component} from "@angular/core";
 
 export class WillSuitComponent {
   categories = [
-    {name: 'MFI', active: false},
-    {name: 'Banks', active: false},
-    {name: 'Online schools', active: false},
-    {name: 'Your industry', active: true},
-    {name: 'Real estate agencies', active: false},
-    {name: 'Healthcare', active: false},
-    {name: 'Hotel business', active: false},
-    {name: 'e-commerce', active: false},
-    {name: 'HR & Recruitment', active: false},
-    {name: 'Telecommunications', active: false},
-    {name: 'Insurance', active: false},
-    {name: 'Retail', active: false},
+    {name: 'Human-likeness', active: false},
+    {name: 'No-code', active: false},
+    {name: 'Database Segmentation', active: false},
+    {name: 'Natural Language Understanding', active: false},
+    {name: 'Speech Synthesis', active: false},
+    {name: 'Advanced Reporting', active: false},
+    {name: 'Open API', active: false},
+    {name: 'Human Intervention Anytime', active: false},
+    {name: 'More than 70 languages', active: false},
+    {name: 'Database Encryption', active: false},
+    {name: 'AI Analysis', active: false},
 
   ]
 }

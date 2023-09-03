@@ -10,8 +10,18 @@ module.exports = {
         'container-bg-color': '#303030',
         'active-tab-color': '#37E4FF',
         'li-color': '#0095AC',
-        'border-color': '#01414A'
-      }
+        'border-color': '#01414A',
+        'input-border': '#00DDFF',
+        'input-bg': '#071517',
+        'bg': '#07071c'
+      },
+      borderWidth: {
+        '0.5': '0.2px',
+      },
+      backgroundImage: {
+        'hero-image': 'url("assets/images/hero-bg.svg")', // Replace with your image path
+      },
+
     },
   },
   plugins: [],

@@ -8,19 +8,19 @@ import {Component} from "@angular/core";
 export class ProcessesComponent {
   processes = [
     {
-      title: 'Sales and marketing',
-      description: 'Up to +200%',
-      text: 'We increase sales with automation of marketing and sales processes (client base operations, cold calling, processing requests and applications, informing about promotions, conducting surveys, etc.)'
+      title: 'Customer Reactivation',
+      description: 'Only $1 per Customer',
+      text: 'Re-engage customers who have not purchased for an extended period by using AI-powered bots that are indistinguishable from people.'
     },
     {
-      title: 'Stimulation for action',
-      description: 'Up to +20%',
-      text: 'We enhance conversion rate to target action with automation of confirmation receipts and stimulate client actions (invoice payment, office attendance, picking up parcels, etc.)'
+      title: 'Customer Retention',
+      description: '94% of Repurchase',
+      text: 'Provide a seamless, personalized, multi-channel communication experience to maintain high customer retention rate.'
     },
     {
-      title: 'HR & Recruitment',
-      description: 'Up to +80%',
-      text: 'We save HR department time with automation of massive recruiting processses and improve internal HR team communication'
+      title: 'NPS Surveys',
+      description: 'Within 30 minutes',
+      text: 'Quickly and efficiently collect feedback to improve your services and to maintain high quality.'
     }
   ]
 }

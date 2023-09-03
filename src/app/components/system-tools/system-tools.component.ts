@@ -10,31 +10,23 @@ export class SystemToolsComponent {
     {
       image: 'assets/images/tools1.svg',
       title: 'Text Chatbots',
-      text: 'For your scenario, robots are configured that are indistinguishable from managers and can communicate with the client in one of the popular messengers '
+      text: 'Text chatbots can be effortlessly tailored to any scenario or process, enabling the use of variables for personalized messaging and follow-up communications post-call. Engage your customers through various channels such as WhatsApp, Email, and SMS.'
     },
     {
       image: 'assets/images/tools2.svg',
       title: 'Voice robots',
-      text: 'Automatic call processing, difficult to distinguish from managers by voice robots, is 10 times cheaper than live managers.'
+      text: 'Handle outbound and inbound calls using our Human-like AI bots, utilizing pre-recorded voices , speech synthesis, and Natural Language Understanding, ensuring authentic and personalized communication with your customers.'
     },
     {
       image: 'assets/images/tools3.svg',
       title: 'Contact center',
-      text: 'Configure incoming and outgoing calls for live processing, reduce downtime and configure routing. So where communication with the manager is needed.'
+      text: 'Configure incoming and outgoing calls for immediate processing, minimize downtime, and establish efficient routing where communication with a manager is required, thereby optimizing the overall communication process with your customers.'
     },
   ]
 
   options = [
     {
-      name: 'HR and Recruiting',
-      active: false
-    },
-    {
-      name: 'Insurance',
-      active: false
-    },
-    {
-      name: 'Taxi depots',
+      name: 'Retail',
       active: true
     }
   ]

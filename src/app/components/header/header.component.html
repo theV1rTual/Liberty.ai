@@ -1,5 +1,5 @@
 <div class="mb-16 md:mb-24">
-  <div class="bg-black px-4 md:px-16 flex md:flex-row items-center justify-between">
+  <div class="bg-bg px-4 md:px-16 flex md:flex-row items-center justify-between">
     <div class="mb-4 md:mb-0 flex items-center">
       <img src="assets/images/logo.svg" class="w-full md:w-auto" />
       <div class="flex font-semibold">
@@ -7,15 +7,19 @@
         <span class="hidden md:flex text-active-tab-color">.ai</span>
       </div>
     </div>
+    <div class="md:flex md:flex-row hidden">
+      <ul class="flex space-x-6">
+        <li *ngFor="let nav of navbar">{{ nav.name }}</li>
+      </ul>
+    </div>
     <div class="flex gap-2 md:gap-4 items-center">
-      <select class="bg-container-bg-color bg-opacity-50 py-1.5 px-3 rounded-xl">
-        <option>EN</option>
-        <option>KZ</option>
-        <option>RU</option>
-      </select>
       <div class="bg-black">
-        <span class="bg-container-bg-color bg-opacity-50 py-1.5 px-3 rounded-xl">sales@stellatech.ai</span>
+        <span class="bg-container-bg-color bg-opacity-50 py-1.5 px-3 rounded-xl">info@stellartech.ai</span>
       </div>
+    </div>
+    <div class="md:hidden">
+      <mat-icon (click)="toggleSidebar()">menu</mat-icon>
     </div>
   </div>
 </div>
+<app-sidebar [isSidebarOpen]="isSidebarOpen" (toggle)="toggleSidebar()"></app-sidebar>

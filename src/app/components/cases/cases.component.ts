@@ -7,29 +7,23 @@ import {Component} from "@angular/core";
 
 export class CasesComponent {
   cases = [
-    {name: 'Electronic commerce', active: true},
-    {name: 'Online schools', active: false},
-    {name: 'Bookmakers', active: false},
-    {name: 'Taxi depots', active: false},
-    {name: 'HR and Recruiting', active: false},
-    {name: 'Insurance', active: false},
-    {name: 'MFI', active: false},
+    {name: 'Retail', active: true},
   ]
   containers = [
     {
-      header: '+7200',
-      description: 'additional sales per month',
-      text: 'Automation of the process - cold calls on the database, in order to sell goods (vitamins)'
+      header: '+200%',
+      description: 'Engagement after reaching out',
+      text: 'An omni-channel automated sales funnel triples customer purchases.'
     },
     {
-      header: '+10%',
-      description: 'redemption of sent parcels',
-      text: 'Automation of the process - stimulating the client to redeem the parcel of the online store sent to the client by cash on delivery'
+      header: '+500%',
+      description: 'Reactivated Clients',
+      text: 'Our streamlined solution increases the number of reactivated customers by x6 times.'
     },
     {
-      header: '70%',
-      description: 'savings in manager\'s time',
-      text: 'Automation of the process - re-confirmation of online store orders'
+      header: '60%',
+      description: 'Automation',
+      text: 'Automation of 60% reactivation processes: calling, sending SMS, Messages, and Emails.'
     }
   ]
 

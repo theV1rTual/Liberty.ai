@@ -16,6 +16,16 @@ import {WillSuitComponent} from "./components/will-suit/will-suit.component";
 import {StartWorkComponent} from "./components/start-work/start-work.component";
 import {ProcessesComponent} from "./components/processes/processes.component";
 import {SolutionsComponent} from "./components/solutions/solutions.component";
+import {ModalComponent} from "./shared/modals/modal.component";
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatButtonModule} from "@angular/material/button";
+import {ReactiveFormsModule} from "@angular/forms";
+import { BlogComponent } from './components/blog/blog.component';
+import {MatIconModule} from "@angular/material/icon";
+import {SidebarComponent} from "./components/sidebar/sidebar.component";
+import {SoundComponent} from "./components/app-sound/sound.component";
+import {MainComponent} from "./components/main/main.component";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -31,12 +41,22 @@ import {SolutionsComponent} from "./components/solutions/solutions.component";
     WillSuitComponent,
     StartWorkComponent,
     ProcessesComponent,
-    SolutionsComponent
+    SolutionsComponent,
+    ModalComponent,
+    BlogComponent,
+    SidebarComponent,
+    SoundComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatButtonModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

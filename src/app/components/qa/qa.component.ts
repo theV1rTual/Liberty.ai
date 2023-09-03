@@ -9,15 +9,15 @@ export class QaComponent {
   containers = [
     {
       title: 'Will my contact database be safe?',
-      text: 'Our system is designed in such a way that phone numbers are encoded and our employees do not see the phone numbers poured into the solution created for you. In addition, we sign a non-disclosure agreement (NDA).'
+      text: 'Rest assured that our system utilizes robust encryption techniques to safeguard phone numbers, rendering them inaccessible to our staff. This solution is exclusively tailored for your use. Moreover, we bolster this security with a Non-Disclosure Agreement (NDA) for your added peace of mind.'
     },
     {
       title: 'How are you different from competitors?',
-      text: 'We combine the creation of text and voice robots to work in various channels, represented by ready-made solutions tested on real people. Our team includes not only IT specialists, but also entrepreneurs and marketers. Our goal is to build strong partnerships with our customers and put our technology where it\'s needed and profitable.'
+      text: 'What sets us apart is our holistic approach, effortlessly integrating text and voice bots across multiple channels using tried-and-tested solutions validated through actual usage. Our team comprises not just IT specialists, but also entrepreneurs and marketers, guaranteeing a well-rounded perspective. We emphasize forging robust partnerships, strategically implementing our technology to optimize value and profitability for our clients.'
     },
     {
-      title: 'Will my contact database be safe?',
-      text: 'Our system is designed in such a way that phone numbers are encoded and our employees do not see the phone numbers poured into the solution created for you. In addition, we sign a non-disclosure agreement (NDA).'
+      title: 'How to calculate the cost of developing a robot?',
+      text: 'The pricing for each project is tailored to its unique requirements, considering the complexity of the automation process and the chosen pricing model. This method ensures a customized solution that precisely aligns with your individual needs.'
     }
   ]
 }

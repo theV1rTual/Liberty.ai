@@ -26,6 +26,8 @@ import {SidebarComponent} from "./components/sidebar/sidebar.component";
 import {SoundComponent} from "./components/app-sound/sound.component";
 import {MainComponent} from "./components/main/main.component";
 import {HttpClientModule} from "@angular/common/http";
+import {PaginationComponent} from "./components/pagination/pagination.component";
+import {BlogModalComponent} from "./shared/modals/blogModal/blogModal.component";
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import {HttpClientModule} from "@angular/common/http";
     BlogComponent,
     SidebarComponent,
     SoundComponent,
-    MainComponent
+    MainComponent,
+    PaginationComponent,
+    BlogModalComponent
   ],
   imports: [
     BrowserModule,

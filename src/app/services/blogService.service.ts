@@ -15,4 +15,8 @@ export class BlogServiceService {
   getBlogs(): Observable<Blog[]> {
     return this.http.get<Blog[]>('https://us-central1-libertyai.cloudfunctions.net/app/api/read')
   }
+
+  getBlog(id: number): Observable<Blog> {
+    return this.http.get<Blog>(`https://us-central1-libertyai.cloudfunctions.net/app/api/read/${id}`)
+  }
 }

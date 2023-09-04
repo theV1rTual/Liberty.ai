@@ -1,14 +1,16 @@
 <div class="bg-bg text-white">
   <app-header></app-header>
-  <div class="px-4 md:px-40 mb-8">
+  <div class="px-4 md:px-40 mb-8 md:mb-40">
     <h2 class="font-bold text-2xl mb-4 md:mb-5">Blogs</h2>
     <ul class="flex flex-wrap gap-4 md:flex-row">
       <li *ngFor="let blog of blogs" class="mb-4 md:mb-0 md:w-[30%]">
-        <div class="bg-container-bg-color rounded-xl p-4 h-full">
-          <h2 class="font-bold mb-2">{{blog.title}}</h2>
-          <h2 class="text-active-tab-color mb-2">{{blog.date}}</h2>
-          <h2 class="mb-2">{{blog.subtitle}}</h2>
-          <button class="bg-button-color w-full rounded-xl py-2">More</button>
+        <div class="bg-container-bg-color rounded-xl p-4 h-full flex flex-col">
+          <div class="flex-grow"> <!-- Added div for text content -->
+            <h2 class="font-bold mb-2">{{blog.title}}</h2>
+            <h2 class="text-active-tab-color mb-2">{{blog.date}}</h2>
+            <h2 class="mb-2">{{blog.subtitle}}</h2>
+          </div>
+          <button class="bg-button-color w-full rounded-xl py-2" (click)="openBlog(blog.id)" >More</button>
         </div>
       </li>
     </ul>

@@ -1,4 +1,6 @@
 import {Component} from "@angular/core";
+import {MatDialog} from "@angular/material/dialog";
+import {ModalComponent} from "../../shared/modals/modal.component";
 
 @Component({
   selector: 'app-qa',
@@ -6,6 +8,8 @@ import {Component} from "@angular/core";
 })
 
 export class QaComponent {
+  constructor(private dialog: MatDialog) {
+  }
   containers = [
     {
       title: 'Will my contact database be safe?',
@@ -20,4 +24,8 @@ export class QaComponent {
       text: 'The pricing for each project is tailored to its unique requirements, considering the complexity of the automation process and the chosen pricing model. This method ensures a customized solution that precisely aligns with your individual needs.'
     }
   ]
+
+  openModal() {
+    this.dialog.open(ModalComponent)
+  }
 }

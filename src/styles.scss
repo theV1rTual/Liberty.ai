@@ -53,3 +53,40 @@ img.slideshow-image {
   height: 100px;
   width: 100%;
 }
+
+.custom-columns {
+  columns: 2;
+  column-gap: 20px; /* Adjust the gap between columns as needed */
+  width: 80%; /* Adjust the width of the container as needed */
+  margin: 0 auto; /* Center the container on the page */
+  //max-height: 300px; /* Set a maximum height for the container */
+  overflow-y: auto; /* Add a vertical scrollbar when content exceeds the container's height */
+}
+.image-container {
+  display: flex;
+  align-items: center; /* Vertically center the image and text */
+  gap: 10px; /* Adjust the gap between the image and text as needed */
+}
+.image {
+  width: 90%; /* Ensure the image does not exceed the container width */
+  max-height: 200px; /* Set a maximum height for the image */
+}
+
+/* Scrollbar styling for WebKit-based browsers */
+.custom-columns::-webkit-scrollbar {
+  width: 12px; /* Adjust the width of the scrollbar */
+}
+
+.custom-columns::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+}
+
+.custom-columns::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the thumb on hover */
+}
+
+.custom-columns::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+  border-radius: 6px; /* Rounded corners for the track */
+}

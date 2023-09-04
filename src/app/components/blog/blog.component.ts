@@ -1,6 +1,8 @@
 import {Component, OnInit} from "@angular/core";
 import { BlogServiceService} from "../../services/blogService.service";
 import {Blog} from "../../interfaces/blog.interface";
+import {MatDialog} from "@angular/material/dialog";
+import {BlogModalComponent} from "../../shared/modals/blogModal/blogModal.component";
 
 @Component({
     selector: 'app-blog',
@@ -10,7 +12,8 @@ import {Blog} from "../../interfaces/blog.interface";
 export class BlogComponent implements OnInit{
 
   blogs: Blog[] = []
-  constructor(private blogService: BlogServiceService) {}
+  blog!: Blog
+  constructor(private blogService: BlogServiceService, private dialog: MatDialog) {}
 
   ngOnInit() {
     this.getBlogs()
@@ -20,5 +23,22 @@ export class BlogComponent implements OnInit{
     this.blogService.getBlogs().subscribe(value => {
       this.blogs = value
     })
+  }
+
+  openBlog(id: number) {
+    this.blogService.getBlog(id).subscribe(value => {
+      this.blog = value
+
+      this.dialog.open(BlogModalComponent, {
+        data: this.blog
+      })
+    })
+
+  }
+
+  currentPage = 1;
+
+  changePage(page: number): void {
+    this.currentPage = page;
   }
 }

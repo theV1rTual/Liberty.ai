@@ -1,4 +1,6 @@
 import {Component} from "@angular/core";
+import {ModalComponent} from "../../shared/modals/modal.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-cases',
@@ -6,6 +8,10 @@ import {Component} from "@angular/core";
 })
 
 export class CasesComponent {
+
+  constructor(private dialog: MatDialog) {
+  }
+
   cases = [
     {name: 'Retail', active: true},
   ]
@@ -27,4 +33,7 @@ export class CasesComponent {
     }
   ]
 
+  openModal() {
+    this.dialog.open(ModalComponent)
+  }
 }

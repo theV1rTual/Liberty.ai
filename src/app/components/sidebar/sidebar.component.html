@@ -12,7 +12,8 @@
     <div class="text-center mt-10">
       <ul>
         <li *ngFor="let link of navbar" class="text-xl mb-5">
-          {{link.name}}
+          <span routerLink="{{link.link}}">{{link.name}}</span>
+
         </li>
       </ul>
     </div>

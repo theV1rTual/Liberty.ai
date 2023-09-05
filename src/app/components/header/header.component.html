@@ -1,4 +1,4 @@
-<div class="fixed top-0 left-0 right-0 bg-bg z-10 h-[10vh] ">
+<div class="fixed top-0 left-0 right-0 bg-bg z-99 h-[10vh] ">
   <div class="">
     <div class="mb-16 px-4 md:px-16 flex md:flex-row items-center justify-between">
       <div class="mb-4 md:mb-0 flex items-center">
@@ -23,7 +23,9 @@
         </div>
       </div>
       <div class="md:hidden">
-        <mat-icon (click)="toggleSidebar()">menu</mat-icon>
+        <button class="z-[99]">
+          <mat-icon (click)="toggleSidebar()">menu</mat-icon>
+        </button>
       </div>
     </div>
   </div>

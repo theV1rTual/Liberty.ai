@@ -15,11 +15,11 @@ export class SidebarComponent {
   }
 
   navbar =  [
-    {name: "Application Areas"},
-    {name: "Key Benefits"},
-    {name: "Getting Started"},
-    {name: "F.A.Q."},
-    {name: "Blog"},
+    {name: "Application Areas", link: ''},
+    {name: "Key Benefits", link: ''},
+    {name: "Getting Started", link: ''},
+    {name: "F.A.Q.", link: ''},
+    {name: "Blog", link: 'blog'},
   ]
 
 }

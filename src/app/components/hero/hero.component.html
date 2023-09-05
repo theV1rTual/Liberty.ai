@@ -1,20 +1,20 @@
-<div class="flex items-center justify-center">
-  <div class="mb-16 md:mb-40">
-    <div
-      *ngIf="!playStarted"
-      class="animate-in absolute inset-0 flex  justify-center transform scale-0 opacity-0 transition-transform ease-in-out duration-300"
-      [ngClass]="showImage ? 'scale-100 opacity-100' : 'hidden'"
-    >
-      <img
-        src="assets/images/click_me.svg"
-        alt="Animated Image"
-        class="max-h-48 max-w-full rounded-lg shadow-md"
-        (click)="playButton()"
-      />
-    </div>
-    <div *ngIf="playStarted" class="relative bg-container-bg-color">
-      <app-sound ></app-sound>
-    </div>
+<div class="flex items-center justify-center ">
+  <div class="mb-16 md:mb-40 md:mt-40 ">
+<!--    <div-->
+<!--      *ngIf="!playStarted"-->
+<!--      class="animate-in absolute inset-0 flex  justify-center transform scale-0 opacity-0 transition-transform ease-in-out duration-300"-->
+<!--      [ngClass]="showImage ? 'scale-100 opacity-100' : 'hidden'"-->
+<!--    >-->
+<!--      <img-->
+<!--        src="assets/images/click_me.svg"-->
+<!--        alt="Animated Image"-->
+<!--        class="max-h-48 max-w-full rounded-lg shadow-md"-->
+<!--        (click)="playButton()"-->
+<!--      />-->
+<!--    </div>-->
+<!--    <div *ngIf="playStarted" class="relative bg-container-bg-color">-->
+<!--      <app-sound ></app-sound>-->
+<!--    </div>-->
     <div class="flex flex-col text-center">
       <div class="flex justify-center mb-5 md:mb-10">
         <img
@@ -24,13 +24,13 @@
         />
       </div>
       <div class="flex flex-col items-center mb-5 md:mb-10">
-        <h1 class="font-bold text-2xl md:text-5xl mb-4 md:mb-10 ">Enhance Your Customer Retention and Reactivation using Human-like
+        <h1 class="font-bold md:text-5xl mb-4 md:mb-10 md:w-[85%] text-[40px]">Enhance Your Customer Retention and Reactivation using Human-like
           AI Robots</h1>
-        <p class="w-full md:w-1/2">Optimize Engagement, Elevate Satisfaction, and Drive Growth with Conversational AI.</p>
+        <p class="w-full md:w-[60%] text-[16px]">Optimize Engagement, Elevate Satisfaction, and Drive Growth with Conversational AI.</p>
       </div>
-      <div class="flex flex-col items-center space-y-3 md:flex-row md:justify-center md:space-x-5">
-        <button (click)="openModal()" class="font-semibold bg-button-color bg-opacity-70 p-4 rounded-3xl px-8 w-[100%] md:w-[auto]">Request your demo</button>
-        <button class="font-semibold bg-container-bg-color bg-opacity-50 p-4 rounded-3xl px-8 w-[100%] md:w-[auto]">How it works?</button>
+      <div class="flex flex-col md:flex-row items-center md:justify-center space-y-3 md:space-y-0 md:space-x-5">
+        <button (click)="openModal()" class="font-semibold bg-button-color bg-opacity-70 p-4 rounded-3xl px-8 md:w-[25%]">Request your demo</button>
+        <button class="font-semibold bg-container-bg-color bg-opacity-50 p-4 rounded-3xl px-8 md:w-[25%]">How it works?</button>
       </div>
     </div>
   </div>

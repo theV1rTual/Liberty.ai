@@ -1,7 +1,8 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef} from "@angular/core";
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../../shared/modals/modal.component";
 import {Router} from "@angular/router";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-header',
@@ -9,14 +10,17 @@ import {Router} from "@angular/router";
 })
 
 export class HeaderComponent {
-  constructor(private router: Router) {
+  constructor(private scrollService: ScrollService) {}
+
+  scrollToComponent(componentKey: string) {
+    this.scrollService.scrollToComponent(componentKey);
   }
 
   navbar =  [
-    {name: "Application Areas", link: ''},
-    {name: "Key Benefits", link: ''},
-    {name: "Getting Started", link: ''},
-    {name: "F.A.Q.", link: ''},
+    {name: "Application Areas", link: 'component1'},
+    {name: "Key Benefits", link: 'component2'},
+    {name: "Getting Started", link: 'component3'},
+    {name: "F.A.Q.", link: 'component4'},
     {name: "Blog", link: 'blog'},
   ]
 

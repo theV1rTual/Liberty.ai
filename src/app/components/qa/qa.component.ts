@@ -1,6 +1,7 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef} from "@angular/core";
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../../shared/modals/modal.component";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-qa',
@@ -8,8 +9,17 @@ import {ModalComponent} from "../../shared/modals/modal.component";
 })
 
 export class QaComponent {
-  constructor(private dialog: MatDialog) {
+
+  constructor(private dialog: MatDialog, private scrollService: ScrollService, private el: ElementRef) {}
+
+  ngOnInit() {
+    this.scrollService.setScrollFunction('component4', () => this.scrollToComponent());
   }
+
+  scrollToComponent() {
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   containers = [
     {
       title: 'Will my contact database be safe?',

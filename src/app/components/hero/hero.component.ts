@@ -1,7 +1,8 @@
-import {Component, OnInit} from "@angular/core";
+import {Component, ElementRef, OnInit} from "@angular/core";
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../../shared/modals/modal.component";
 import {animate, style, transition, trigger} from "@angular/animations";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-hero',
@@ -29,7 +30,13 @@ export class HeroComponent implements OnInit{
   animateWave = false;
   showImage = false;
   playStarted = false
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private scrollService: ScrollService, private el: ElementRef) {}
+
+
+  scrollToComponent() {
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
 
   currentIndex = 0;
   images = [
@@ -45,9 +52,11 @@ export class HeroComponent implements OnInit{
   }
 
   ngOnInit() {
+    this.scrollService.setScrollFunction('hero', () => this.scrollToComponent());
+
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    }, 500);
+    }, 200);
 
     setTimeout(() => {
       this.showImage = true;

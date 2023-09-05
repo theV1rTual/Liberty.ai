@@ -1,11 +1,22 @@
-import {Component} from "@angular/core";
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from "@angular/core";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-solutions',
   templateUrl: './solutions.component.html'
 })
 
-export class SolutionsComponent {
+export class SolutionsComponent implements OnInit {
+  constructor(private scrollService: ScrollService, private el: ElementRef) {}
+
+  ngOnInit() {
+    this.scrollService.setScrollFunction('component1', () => this.scrollToComponent());
+  }
+
+  scrollToComponent() {
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   leftSolutions = [
     {
       image: 'assets/images/solutions1.svg',
@@ -30,11 +41,11 @@ export class SolutionsComponent {
       text: 'Interest-Based Promos'
     },
     {
-      image: 'assets/images/solutions6.svg',
+      image: 'assets/images/application1.svg',
       text: 'Tailored Updates'
     },
     {
-      image: 'assets/images/solutions7.svg',
+      image: 'assets/images/application2.svg',
       text: 'Encouraging the client to take Target Action'
     },
     {

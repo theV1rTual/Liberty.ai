@@ -1,4 +1,5 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef} from "@angular/core";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-processes',
@@ -6,6 +7,17 @@ import {Component} from "@angular/core";
 })
 
 export class ProcessesComponent {
+
+  constructor(private scrollService: ScrollService, private el: ElementRef) {}
+
+  ngOnInit() {
+    this.scrollService.setScrollFunction('component2', () => this.scrollToComponent());
+  }
+
+  scrollToComponent() {
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   processes = [
     {
       title: 'Customer Reactivation',

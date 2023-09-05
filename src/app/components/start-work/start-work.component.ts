@@ -1,6 +1,7 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef} from "@angular/core";
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../../shared/modals/modal.component";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-start-work',
@@ -8,7 +9,16 @@ import {ModalComponent} from "../../shared/modals/modal.component";
 })
 
 export class StartWorkComponent {
-  constructor(private dialog: MatDialog) {
+  constructor(private dialog: MatDialog, private scrollService: ScrollService, private el: ElementRef) {
+  }
+
+
+  ngOnInit() {
+    this.scrollService.setScrollFunction('component3', () => this.scrollToComponent());
+  }
+
+  scrollToComponent() {
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
   }
 
   openModal() {

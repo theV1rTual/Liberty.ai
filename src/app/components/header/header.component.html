@@ -1,4 +1,4 @@
-<div class="fixed top-0 left-0 right-0 bg-bg z-99 h-[10vh] ">
+<div class="fixed top-0 left-0 right-0 bg-bg z-[109] h-[10vh] ">
   <div class="">
     <div class="mb-16 px-4 md:px-16 flex md:flex-row items-center justify-between">
       <div class="mb-4 md:mb-0 flex items-center">
@@ -11,7 +11,7 @@
       <div class="md:flex md:flex-row hidden">
         <ul class="flex space-x-6">
           <li *ngFor="let nav of navbar" class="text-[14px]">
-            <div routerLink="{{nav.link}}" class="cursor-pointer" (click)="scrollToComponent(nav.link)" >
+            <div routerLink="{{nav.url}}" class="cursor-pointer" (click)="scrollToComponent(nav.link)" >
               {{ nav.name }}
             </div>
           </li>

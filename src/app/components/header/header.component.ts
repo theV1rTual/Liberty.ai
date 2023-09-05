@@ -17,11 +17,11 @@ export class HeaderComponent {
   }
 
   navbar =  [
-    {name: "Application Areas", link: 'component1'},
-    {name: "Key Benefits", link: 'component2'},
-    {name: "Getting Started", link: 'component3'},
-    {name: "F.A.Q.", link: 'component4'},
-    {name: "Blog", link: 'blog'},
+    {name: "Application Areas", link: 'component1', url: ''},
+    {name: "Key Benefits", link: 'component2', url: ''},
+    {name: "Getting Started", link: 'component3', url: ''},
+    {name: "F.A.Q.", link: 'component4', url: ''},
+    {name: "Blog", link: 'blog', url: 'blog'},
   ]
 
   isSidebarOpen = false;

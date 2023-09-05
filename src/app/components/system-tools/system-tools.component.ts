@@ -1,4 +1,5 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef} from "@angular/core";
+import {ScrollService} from "../../services/scroll.service";
 
 @Component({
   selector: 'app-system-tools',
@@ -6,6 +7,16 @@ import {Component} from "@angular/core";
 })
 
 export class SystemToolsComponent {
+  constructor(private scrollService: ScrollService, private el: ElementRef) {}
+
+  ngOnInit() {
+    this.scrollService.setScrollFunction('component6', () => this.scrollToComponent());
+  }
+
+  scrollToComponent() {
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  }
+
   tools = [
     {
       image: 'assets/images/tools1.svg',

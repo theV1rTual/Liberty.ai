@@ -33,8 +33,8 @@ export class HeroComponent implements OnInit{
   constructor(public dialog: MatDialog, private scrollService: ScrollService, private el: ElementRef) {}
 
 
-  scrollToComponent() {
-    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+  scrollToComponent(componentKey: string) {
+    this.scrollService.scrollToComponent(componentKey);
   }
 
 
@@ -52,7 +52,7 @@ export class HeroComponent implements OnInit{
   }
 
   ngOnInit() {
-    this.scrollService.setScrollFunction('hero', () => this.scrollToComponent());
+
 
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;

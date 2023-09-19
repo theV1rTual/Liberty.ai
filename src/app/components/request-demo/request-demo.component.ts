@@ -1,5 +1,7 @@
 import {Component} from "@angular/core";
 import {animate, style, transition, trigger} from "@angular/animations";
+import {MatDialog} from "@angular/material/dialog";
+import {ModalComponent} from "../../shared/modals/modal.component";
 
 @Component({
   selector: 'app-request-demo',
@@ -18,6 +20,9 @@ import {animate, style, transition, trigger} from "@angular/animations";
 })
 
 export class RequestDemoComponent {
+  constructor(private dialog: MatDialog) {
+  }
+
   currentIndex = 0;
   images = [
     'assets/images/hero1.svg',
@@ -29,6 +34,10 @@ export class RequestDemoComponent {
   ngOnInit() {
     setInterval(() => {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
-    }, 500);
+    }, 200);
+  }
+
+  openModal() {
+    this.dialog.open(ModalComponent)
   }
 }

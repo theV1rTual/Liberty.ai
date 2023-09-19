@@ -14,7 +14,7 @@ export class SystemToolsComponent {
   }
 
   scrollToComponent() {
-    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' , block : 'center' });
   }
 
   tools = [

@@ -17,7 +17,7 @@ export class QaComponent {
   }
 
   scrollToComponent() {
-    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth', block : 'end' });
   }
 
   containers = [

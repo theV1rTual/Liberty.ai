@@ -28,6 +28,7 @@ import {MainComponent} from "./components/main/main.component";
 import {HttpClientModule} from "@angular/common/http";
 import {PaginationComponent} from "./components/pagination/pagination.component";
 import {BlogModalComponent} from "./shared/modals/blogModal/blogModal.component";
+import {NgxSkeletonLoaderModule} from "ngx-skeleton-loader";
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {BlogModalComponent} from "./shared/modals/blogModal/blogModal.component"
     MatButtonModule,
     ReactiveFormsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSkeletonLoaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

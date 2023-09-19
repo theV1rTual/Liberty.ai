@@ -13,6 +13,7 @@ export class BlogComponent implements OnInit{
 
   blogs: Blog[] = []
   blog!: Blog
+  loading: boolean = true
   constructor(private blogService: BlogServiceService, private dialog: MatDialog) {}
 
   ngOnInit() {
@@ -21,6 +22,7 @@ export class BlogComponent implements OnInit{
 
   getBlogs() {
     this.blogService.getBlogs().subscribe(value => {
+      this.loading = false
       this.blogs = value
     })
   }
@@ -41,4 +43,6 @@ export class BlogComponent implements OnInit{
   changePage(page: number): void {
     this.currentPage = page;
   }
+
+  protected readonly Array = Array;
 }

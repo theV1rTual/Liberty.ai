@@ -1,5 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from "@angular/core";
 import {ScrollService} from "../../services/scroll.service";
+import {MatDialog} from "@angular/material/dialog";
+import {ModalComponent} from "../../shared/modals/modal.component";
 
 @Component({
   selector: 'app-solutions',
@@ -7,14 +9,18 @@ import {ScrollService} from "../../services/scroll.service";
 })
 
 export class SolutionsComponent implements OnInit {
-  constructor(private scrollService: ScrollService, private el: ElementRef) {}
+  constructor(private scrollService: ScrollService, private el: ElementRef, private dialog: MatDialog) {}
+
+  openModal() {
+    this.dialog.open(ModalComponent)
+  }
 
   ngOnInit() {
     this.scrollService.setScrollFunction('component1', () => this.scrollToComponent());
   }
 
   scrollToComponent() {
-    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth', block : 'center'});
   }
 
   leftSolutions = [

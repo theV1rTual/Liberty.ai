@@ -15,7 +15,7 @@ export class ProcessesComponent {
   }
 
   scrollToComponent() {
-    this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.el.nativeElement.scrollIntoView({ behavior: 'smooth', block : 'center' });
   }
 
   processes = [

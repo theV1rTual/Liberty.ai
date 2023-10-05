@@ -9,7 +9,7 @@ import {ScrollService} from "../../services/scroll.service";
   templateUrl: './header.component.html',
 })
 
-export class HeaderComponent {
+export class HeaderComponent{
 
   constructor(private scrollService: ScrollService) {}
 
@@ -17,8 +17,11 @@ export class HeaderComponent {
     this.scrollService.scrollToComponent(componentKey);
   }
 
+  scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  }
+
   navbar =  [
-    {name: "Header", link: `header`, url: ''},
     {name: "Application Areas", link: 'component1', url: ''},
     {name: "Key Benefits", link: 'component2', url: ''},
     {name: "Getting Started", link: 'component3', url: ''},

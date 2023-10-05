@@ -44,5 +44,30 @@ export class BlogComponent implements OnInit{
     this.currentPage = page;
   }
 
+  getSubtitle(inputString: string) {
+    return inputString.slice(0, 200)
+
+    // Define a regular expression pattern to identify sentences
+    // let punctuationMarks = ['.', '!', '?'];
+    //
+    // // Initialize a counter for sentence endings
+    // let sentenceEndings = 0;
+    //
+    // // Iterate through the characters in the input string
+    // for (let i = 0; i < inputString.length; i++) {
+    //   let char = inputString[i];
+    //   if (punctuationMarks.includes(char)) {
+    //     sentenceEndings++;
+    //     if (sentenceEndings === 2) {
+    //       // Return the substring starting from the next character after the second sentence ending
+    //       return inputString.substring(i + 1);
+    //     }
+    //   }
+    // }
+    //
+    // // If there are not enough sentences, return a message
+    // return "Not enough sentences in the input string.";
+  }
+
   protected readonly Array = Array;
 }

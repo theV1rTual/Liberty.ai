@@ -1,6 +1,6 @@
 export interface Blog {
   id: number;
-  date: string;
+  created_at: string;
   title: string;
   subtitle: string;
   image: string;

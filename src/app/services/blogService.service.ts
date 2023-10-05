@@ -13,10 +13,11 @@ export class BlogServiceService {
   constructor(private http: HttpClient) {}
 
   getBlogs(): Observable<Blog[]> {
-    return this.http.get<Blog[]>('https://us-central1-libertyai.cloudfunctions.net/app/api/read')
+    return this.http.get<Blog[]>('https://backend-designers.liberty.space/stellartech/')
   }
 
-  getBlog(id: number): Observable<Blog> {
-    return this.http.get<Blog>(`https://us-central1-libertyai.cloudfunctions.net/app/api/read/${id}`)
+  getBlog(title: string): Observable<Blog> {
+    return this.http.get<Blog>(`https://backend-designers.liberty.space/stellartech/blog/?title=${title}`)
   }
 }
+

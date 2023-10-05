@@ -37,7 +37,6 @@ export class HeroComponent implements OnInit{
     this.scrollService.scrollToComponent(componentKey);
   }
 
-
   currentIndex = 0;
   images = [
     'assets/images/hero1.svg',

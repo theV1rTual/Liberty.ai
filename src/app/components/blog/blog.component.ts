@@ -27,8 +27,8 @@ export class BlogComponent implements OnInit{
     })
   }
 
-  openBlog(id: number) {
-    this.blogService.getBlog(id).subscribe(value => {
+  openBlog(title: string) {
+    this.blogService.getBlog(title).subscribe(value => {
       this.blog = value
 
       this.dialog.open(BlogModalComponent, {

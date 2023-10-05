@@ -1,4 +1,4 @@
-import {Component, ElementRef} from "@angular/core";
+import {Component, ElementRef, OnInit} from "@angular/core";
 import {MatDialog} from "@angular/material/dialog";
 import {ModalComponent} from "../../shared/modals/modal.component";
 import {Router} from "@angular/router";
@@ -10,6 +10,7 @@ import {ScrollService} from "../../services/scroll.service";
 })
 
 export class HeaderComponent {
+
   constructor(private scrollService: ScrollService) {}
 
   scrollToComponent(componentKey: string) {
@@ -17,6 +18,7 @@ export class HeaderComponent {
   }
 
   navbar =  [
+    {name: "Header", link: `header`, url: ''},
     {name: "Application Areas", link: 'component1', url: ''},
     {name: "Key Benefits", link: 'component2', url: ''},
     {name: "Getting Started", link: 'component3', url: ''},

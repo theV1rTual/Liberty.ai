@@ -8,26 +8,10 @@ import {ScrollService} from "../../services/scroll.service";
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   animations: [
-    trigger('fadeInOut', [
-      transition(':enter', [
-        style({ opacity: 0 }), // Start with zero opacity
-        animate('1000ms', style({ opacity: 1 })), // Fade in over 500ms
-      ]),
-      transition(':leave', [
-        animate('300ms', style({ opacity: 0 })), // Fade out over 500ms
-      ]),
-    ]),
-    trigger('waveAnimation', [
-      transition(':enter', [
-        style({ height: '0' }),
-        animate('1s', style({ height: '4rem' })),
-      ]),
-    ]),
   ],
 })
 
 export class HeroComponent implements OnInit{
-  animateWave = false;
   showImage = false;
   playStarted = false
   constructor(public dialog: MatDialog, private scrollService: ScrollService, private el: ElementRef) {}

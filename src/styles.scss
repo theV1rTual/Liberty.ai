@@ -68,8 +68,7 @@ img.slideshow-image {
   gap: 10px; /* Adjust the gap between the image and text as needed */
 }
 .image {
-  width: 90%; /* Ensure the image does not exceed the container width */
-  max-height: 200px; /* Set a maximum height for the image */
+  object-fit: cover;
 }
 
 /* Scrollbar styling for WebKit-based browsers */

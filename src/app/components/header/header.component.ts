@@ -11,7 +11,7 @@ import {ScrollService} from "../../services/scroll.service";
 
 export class HeaderComponent{
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, public dialog: MatDialog) {}
 
   scrollToComponent(componentKey: string) {
     this.scrollService.scrollToComponent(componentKey);
@@ -19,6 +19,7 @@ export class HeaderComponent{
 
   scrollToTop() {
     window.scrollTo({top: 0, behavior: 'smooth'})
+    this.dialog.closeAll();
   }
 
   navbar =  [
